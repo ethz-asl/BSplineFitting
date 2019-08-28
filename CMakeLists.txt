@@ -4,6 +4,8 @@ project(bsplinefitting)
 find_package(catkin_simple REQUIRED)
 catkin_simple(ALL_DEPS_REQUIRED)
 
+add_definitions(-std=c++11 -Wno-enum-compare)
+
 cs_add_library(${PROJECT_NAME}
   src/cubic_b_spline.cpp
   src/spline_curve_fitting.cpp
